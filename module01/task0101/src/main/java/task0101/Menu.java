@@ -31,7 +31,7 @@ public class Menu {
     }
 
     public void addOption(String option) {
-        options.put(options.size() - 1, option);
+        options.put(options.size(), option);
     }
 
     public void showMenu() {

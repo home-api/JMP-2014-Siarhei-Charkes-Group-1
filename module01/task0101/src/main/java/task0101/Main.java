@@ -4,8 +4,9 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
@@ -15,6 +16,8 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public class Main {
+
+    private static final CustomClassLoader CLASS_LOADER = new CustomClassLoader(new URL[]{});
 
     private static final Logger LOG = Logger.getLogger(Main.class);
     private static final Scanner CONSOLE = new Scanner(System.in);
@@ -51,7 +54,9 @@ public class Main {
             print(EXIT_MESSAGE);
             exit();
         } else {
-            loadPlugin(existingPlugins.get(userChoice - 1));
+            loadPlugin(existingPlugins.get(userChoice - 1), CLASS_LOADER);
+            makeCall();
+            main(args);
         }
     }
 
@@ -131,7 +136,7 @@ public class Main {
         return selectFileMenu;
     }
 
-    private static void loadPlugin(File file) {
+    private static void loadPlugin(File file, CustomClassLoader classLoader) {
         LOG.info("Loading classes started...");
         try {
             String jarFileName = "jar:" + file.toURI().toURL().toString() + "!/";
@@ -146,19 +151,47 @@ public class Main {
                             .replace(".class", "");
                     LOG.info("Loading class " + className + "...");
                     try {
-                        Class.forName(
-                                className,
-                                true,
-                                new URLClassLoader(new URL[]{new URL(jarFileName)}));
+                        classLoader.addURL(new URL(jarFileName));
+                        Class.forName(className, true, classLoader);
                     } catch (ClassNotFoundException e) {
                         LOG.info("Error while loading class " + className, e);
                     }
                     LOG.info(className + " loaded.");
+                    print("loaded " + className);
                 }
             }
             LOG.info("Loading classes finished.");
         } catch (IOException e) {
             LOG.info("Error while opening file " + file, e);
+        }
+    }
+
+    private static void makeCall() {
+        try {
+            print("Enter class name that you are going to use:");
+            String className = CONSOLE.nextLine();
+            Class loadedClass = CLASS_LOADER.loadClass(className);
+
+            print(className + " has methods:");
+            for (Method method : loadedClass.getMethods()) {
+                print(method.getName());
+            }
+
+            print("Choose method to call:");
+            String methodName = CONSOLE.nextLine();
+            //noinspection unchecked
+            loadedClass.getMethod(methodName).invoke(loadedClass.newInstance());
+
+        } catch (ClassNotFoundException e) {
+            LOG.info(e);
+        } catch (InvocationTargetException e) {
+            LOG.info(e);
+        } catch (NoSuchMethodException e) {
+            LOG.info(e);
+        } catch (InstantiationException e) {
+            LOG.info(e);
+        } catch (IllegalAccessException e) {
+            LOG.info(e);
         }
     }
 
