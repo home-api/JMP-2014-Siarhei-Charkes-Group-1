@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9bcb65-fa97-4aeb-93cd-528d6d14b5d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/task0101/CustomClassLoader.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../task0102/src/main/java/task0102/CustomClassLoader.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../task0102/src/main/java/task0102/Main.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../task0102/src/main/java/task0102/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/task0101/Main.java" afterPath="$PROJECT_DIR$/src/main/java/task0101/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/task0101/Menu.java" afterPath="$PROJECT_DIR$/src/main/java/task0101/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../task0102/.idea/misc.xml" afterPath="$PROJECT_DIR$/../task0102/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../task0102/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../task0102/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -675,17 +671,21 @@
       <updated>1412514052562</updated>
       <workItem from="1412514059528" duration="58000" />
       <workItem from="1412514339967" duration="15469000" />
-      <workItem from="1412534782526" duration="1660000" />
+      <workItem from="1412534782526" duration="2018000" />
     </task>
     <task id="LOCAL-00001" summary="task0101">
       <created>1412530941508</created>
       <updated>1412530941508</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reloading classes was removed">
+      <created>1412536521254</created>
+      <updated>1412536521254</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17187000" />
+    <option name="totallyTimeSpent" value="17545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -736,7 +736,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="task0101" />
-    <option name="LAST_COMMIT_MESSAGE" value="task0101" />
+    <MESSAGE value="reloading classes was removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="reloading classes was removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
