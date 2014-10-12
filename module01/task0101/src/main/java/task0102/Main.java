@@ -1,5 +1,6 @@
-package task0101;
+package task0102;
 
+import classloader.JarClassLoader;
 import org.apache.log4j.Logger;
 import application.MainApplication;
 
@@ -19,7 +20,7 @@ public class Main {
 
         Boolean isProgramRunning = true;
         while (isProgramRunning) {
-            isProgramRunning = mainApplication.start();
+            isProgramRunning = mainApplication.start(new JarClassLoader());
         }
 
         LOG.info(EXIT_MESSAGE);

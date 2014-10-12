@@ -1,11 +1,12 @@
-package task0101;
+package application;
 
+import classloader.CustomClassLoader;
+import classloader.JarClassLoader;
+import file.JarFilesExtractor;
+import menu.Menu;
 import org.apache.log4j.Logger;
-import task0101.classloader.JarClassLoader;
-import task0101.file.JarFilesExtractor;
-import task0101.menu.Menu;
-import task0101.plugin.Caller;
-import task0101.plugin.PluginLoader;
+import plugin.Caller;
+import plugin.PluginLoader;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,10 +21,9 @@ public class MainApplication {
     private final static Scanner CONSOLE = new Scanner(System.in);
 
     private static final Menu CHANGE_FOLDER_MENU = new Menu(CONSOLE, "Choose another folder");
-    private final JarClassLoader classLoader;
 
     private String[] args;
-
+    private CustomClassLoader classLoader;
     private JarFilesExtractor jarFilesExtractor;
     private PluginLoader pluginLoader;
 
@@ -33,6 +33,11 @@ public class MainApplication {
         jarFilesExtractor = new JarFilesExtractor();
         classLoader = new JarClassLoader();
         pluginLoader = new PluginLoader(classLoader);
+    }
+
+    public Boolean start(CustomClassLoader classLoader) throws IOException {
+        this.classLoader = classLoader;
+        return start();
     }
 
     public Boolean start() throws IOException {

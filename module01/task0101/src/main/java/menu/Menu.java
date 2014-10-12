@@ -1,7 +1,6 @@
-package task0101.menu;
+package menu;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
-package task0101.plugin;
+package plugin;
 
 import org.apache.log4j.Logger;
-import task0101.classloader.CustomClassLoader;
+import classloader.CustomClassLoader;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

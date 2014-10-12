@@ -1,8 +1,7 @@
-package task0101.plugin;
+package plugin;
 
-import com.sun.deploy.util.PerfLogger;
 import org.apache.log4j.Logger;
-import task0101.classloader.CustomClassLoader;
+import classloader.CustomClassLoader;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +18,7 @@ import java.util.jar.JarFile;
  */
 public class PluginLoader {
 
-    private final static Logger LOG = Logger.getLogger(PerfLogger.class);
+    private final static Logger LOG = Logger.getLogger(PluginLoader.class);
 
     private CustomClassLoader classLoader;
 

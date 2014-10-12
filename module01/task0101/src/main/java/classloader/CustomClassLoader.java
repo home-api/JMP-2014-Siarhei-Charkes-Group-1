@@ -1,4 +1,4 @@
-package task0101.classloader;
+package classloader;
 
 import java.net.URL;
 
