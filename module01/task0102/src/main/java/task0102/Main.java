@@ -1,5 +1,7 @@
 package task0102;
 
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.map.UnmodifiableMap;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -179,13 +181,11 @@ public class Main {
             print("Choose method to call:");
             String methodName = CONSOLE.nextLine();
             //noinspection unchecked
-            loadedClass.getMethod(methodName).invoke(loadedClass.newInstance());
+            UnmodifiableMap obj = (UnmodifiableMap) loadedClass.newInstance();
+            obj.put(1, 1);
+            //loadedClass.getMethod(methodName).invoke(obj);
 
         } catch (ClassNotFoundException e) {
-            LOG.info(e);
-        } catch (InvocationTargetException e) {
-            LOG.info(e);
-        } catch (NoSuchMethodException e) {
             LOG.info(e);
         } catch (InstantiationException e) {
             LOG.info(e);
