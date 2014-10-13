@@ -1,0 +1,6 @@
+-XX:-UseConcMarkSweepGC
+-Xms6M
+-Xmx18M
+-XX:NewSize=2M
+-XX:PermSize=20M
+-XX:MaxPermSize=30M

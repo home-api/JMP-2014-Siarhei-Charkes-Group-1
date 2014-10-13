@@ -1,0 +1,7 @@
+-XX:-UseConcMarkSweepGC
+-XX:ConcGCThreads=2
+-Xms2M
+-Xmx18M
+-XX:NewSize=1M
+-XX:PermSize=24M
+-XX:MaxPermSize=36M
