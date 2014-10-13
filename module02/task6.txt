@@ -1,0 +1,7 @@
+-XX:+UseParallelGC
+-XX:ParallelGCThreads=2
+-Xms4M
+-Xmx16M
+-XX:NewSize=3M
+-XX:PermSize=24M
+-XX:MaxPermSize=32M
