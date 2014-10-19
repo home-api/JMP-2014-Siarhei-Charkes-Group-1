@@ -1,0 +1,5 @@
+-Xms265M
+-Xmx265M
+-XX:SurvivorRatio=1
+-XX:NewRatio=28
+-Xss1M
