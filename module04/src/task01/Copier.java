@@ -22,7 +22,8 @@ public class Copier {
     private static BlockingQueue<Integer> buffer = new SynchronousQueue<Integer>();
 
     private static List<String> exceptions = Collections.synchronizedList(new ArrayList<String>());
-    private static File fromFile;
+
+    private static long fromFileSize = 0l;
     private static File toFile;
 
     public static void main(String[] args) {
@@ -34,7 +35,8 @@ public class Copier {
         System.out.println("Please enter the output file name:");
         String outputFileName = scanner.nextLine();
 
-        fromFile = new File(inputFileName);
+        File fromFile = new File(inputFileName);
+        fromFileSize = fromFile.length();
         FileReader fileReader = new FileReader(fromFile);
         toFile = new File(outputFileName);
         FileWriter fileWriter = new FileWriter(toFile);
@@ -42,6 +44,12 @@ public class Copier {
         new Thread(fileReader).start();
         new Thread(fileWriter).start();
 
+        if (!exceptions.isEmpty()) {
+            printAllEceptions();
+        }
+    }
+
+    private static void printAllEceptions() {
         System.out.println("Something went wrong...");
         for (String exception : exceptions) {
             System.out.println(exception);
@@ -92,7 +100,7 @@ public class Copier {
             FileOutputStream outputStream = null;
             try {
                 outputStream = new FileOutputStream(file);
-                while (fromFile.length() != toFile.length()) {
+                while (toFile.length() != fromFileSize) {
                     outputStream.write(buffer.take());
                     outputStream.flush();
                 }
