@@ -32,8 +32,18 @@ public class Copier {
         Reader fileReader = new Reader(from);
         Writer fileWriter = new Writer(to);
 
-        new Thread(fileReader).start();
-        new Thread(fileWriter).start();
+        Thread readerThread = new Thread(fileReader);
+        Thread writerThread = new Thread(fileWriter);
+
+        readerThread.start();
+        writerThread.start();
+
+        try {
+            readerThread.join();
+            writerThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         return exceptions;
     }
