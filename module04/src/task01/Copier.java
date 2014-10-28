@@ -1,15 +1,12 @@
 package task01;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,66 +16,52 @@ import java.util.concurrent.SynchronousQueue;
  */
 public class Copier {
 
-    private static BlockingQueue<Integer> buffer = new SynchronousQueue<Integer>();
+    public static final int MAX_QUEUE_SIZE = 100;
 
-    private static List<String> exceptions = Collections.synchronizedList(new ArrayList<String>());
+    private BlockingQueue<String> buffer = new LinkedBlockingQueue<String>(MAX_QUEUE_SIZE);
 
-    private static long fromFileSize = 0l;
-    private static File toFile;
+    private List<String> exceptions = Collections.synchronizedList(new ArrayList<String>());
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private long fromFileSize;
+    private File toFile;
 
-        System.out.println("Please enter the input file name:");
-        String inputFileName = scanner.nextLine();
+    public List<String> copy(File from, File to) {
+        fromFileSize = from.length();
+        toFile = to;
 
-        System.out.println("Please enter the output file name:");
-        String outputFileName = scanner.nextLine();
-
-        File fromFile = new File(inputFileName);
-        fromFileSize = fromFile.length();
-        FileReader fileReader = new FileReader(fromFile);
-        toFile = new File(outputFileName);
-        FileWriter fileWriter = new FileWriter(toFile);
+        Reader fileReader = new Reader(from);
+        Writer fileWriter = new Writer(to);
 
         new Thread(fileReader).start();
         new Thread(fileWriter).start();
 
-        if (!exceptions.isEmpty()) {
-            printAllEceptions();
-        }
+        return exceptions;
     }
 
-    private static void printAllEceptions() {
-        System.out.println("Something went wrong...");
-        for (String exception : exceptions) {
-            System.out.println(exception);
-        }
-    }
 
-    private static class FileReader implements Runnable {
+    private class Reader implements Runnable {
 
         private File file;
 
-        private FileReader(File file) {
+        private Reader(File file) {
             this.file = file;
         }
 
         @Override
         public void run() {
-            FileInputStream inputStream = null;
+            BufferedReader reader = null;
             try {
-                inputStream = new FileInputStream(file);
-                int c;
-                while ((c = inputStream.read()) != -1) {
-                    buffer.put(c);
+                reader = new BufferedReader(new FileReader(file));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    buffer.put(line);
                 }
             } catch (Exception e) {
                 exceptions.add(e.getMessage());
             } finally {
                 try {
-                    if (inputStream != null) {
-                        inputStream.close();
+                    if (reader != null) {
+                        reader.close();
                     }
                 } catch (IOException ex) {
                     exceptions.add(ex.getMessage());
@@ -87,32 +70,32 @@ public class Copier {
         }
     }
 
-    private static class FileWriter implements Runnable {
+    private class Writer implements Runnable {
 
         private File file;
 
-        private FileWriter(File file) {
+        private Writer(File file) {
             this.file = file;
         }
 
         @Override
         public void run() {
-            FileOutputStream outputStream = null;
+            BufferedWriter writer = null;
             try {
-                outputStream = new FileOutputStream(file);
-                while (toFile.length() != fromFileSize) {
-                    outputStream.write(buffer.take());
-                    outputStream.flush();
+                writer = new BufferedWriter(new FileWriter(file));
+                while (toFile.length() < fromFileSize) {
+                    writer.write(buffer.poll(1, TimeUnit.SECONDS));
+                    writer.newLine();
                 }
             } catch (Exception e) {
                 exceptions.add(e.getMessage());
             } finally {
-                try {
-                    if (outputStream != null) {
-                        outputStream.close();
+                if (writer != null) {
+                    try {
+                        writer.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException ex) {
-                    exceptions.add(ex.getMessage());
                 }
             }
         }
