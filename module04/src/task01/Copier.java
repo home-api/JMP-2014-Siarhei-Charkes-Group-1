@@ -104,7 +104,7 @@ public class Copier {
                     try {
                         writer.close();
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        exceptions.add(e.getMessage());
                     }
                 }
             }
