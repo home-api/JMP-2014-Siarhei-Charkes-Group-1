@@ -1,0 +1,20 @@
+form {
+    width: 600px;
+}
+
+form input[type=text],
+form input[type=date],
+form input[type=email],
+form input[type=tel],
+form input[type=url] {
+    width: 200px;
+}
+
+form input[type=number] {
+    width: 50px;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,87 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script>
+    function validate() {
+        var fio = document.forms["form"]["fio"].value;
+        var error = document.getElementById("error");
+        if (fio == null || fio.length <= 3) {
+            error.innerHTML = "The field name can not be less than 3 characters";
+            return false;
+        } else {
+            error.innerHTML = "";
+            return true;
+        }
+    }
+</script>
+<span id="error"></span>
+<form action="" name="form" onsubmit="return validate()" method="post">
+    <fieldset>
+        <legend>Форма регистрации</legend>
+        <table>
+            <tr>
+                <td><label for="fio">ФИО</label></td>
+                <td><input type="text" id="fio" name="fio"/></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email"/></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Номер телефона</label></td>
+                <td><input type="tel" id="phone" placeholder="xxx xxx-xx-xx"/></td>
+            </tr>
+            <tr>
+                <td><label for="site">Веб-сайт</label></td>
+                <td><input type="url" id="site"/></td>
+            </tr>
+            <tr>
+                <td><label for="bithday">Дата рождения</label></td>
+                <td><input type="date" id="bithday"/></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Параметры доставки</legend>
+        <table>
+            <tr>
+                <td><label for="country">Страна</label></td>
+                <td><input type="text" id="country"/></td>
+            </tr>
+            <tr>
+                <td><label for="address">Адрес</label></td>
+                <td><textarea id="address" rows="5" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="postcode">Почтовый индекс</label></td>
+                <td><input type="text" id="postcode"/></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Предпочитаемый</legend>
+        <table>
+            <tr>
+                <td colspan="2"><input type="radio" name="notification" value="email"/>По Email</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="radio" name="notification" value="phone"/>По телефону</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="radio" name="notification" value="none"/>Не уведомлять меня</td>
+            </tr>
+            <tr>
+                <td><label for="not-count">Кол-во уведомление в неделю</label></td>
+                <td><input type="number" id="not-count"/></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <input type="submit" value="Отправить данные"/>
+    </fieldset>
+</form>
+</body>
+</html>
