@@ -1,0 +1,113 @@
+body {
+    background-color: #536346;
+    margin: 0;
+}
+
+header {
+    background-color: #433449;
+    height: 120px;
+    color: #D6CDBE;
+}
+
+header h1, h2 {
+    text-align: center;
+}
+
+header h1, h2 {
+    padding-top: 10px;
+}
+
+nav {
+    width: 200px;
+    height: 100%;
+    float: left;
+    margin-right: 40px;
+}
+
+nav .nav-title {
+    color: #C8D6C7;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 5px;
+}
+
+nav ul li {
+    border-bottom: 2px solid #C8D6C7;
+    padding: 5px 0 0 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    margin: 0 0 0 5px;
+    font-weight: bold;
+}
+
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+    color: #433449;
+}
+
+section {
+    position: relative;
+    margin: 0 140px 0 240px;
+}
+
+section article {
+    background-color: #D6CDBE;
+    border-radius: 15px;
+    padding: 5px 0 5px 0;
+    margin: 20px;
+}
+
+section article p {
+    margin: 10px;
+}
+
+section article h4,
+section article aside {
+    border-radius: 15px;
+    margin: 0 10px 0 10px;
+    color: #D6CDBE;
+    text-align: center;
+    height: 20px;
+}
+
+section article h4 {
+    background-color: #433449;
+}
+
+section article aside {
+    background-color: #65444F;
+}
+
+figure {
+    position: absolute;
+    right: 0;
+    top: 140px;
+    width: 100px;
+    height: 80px;
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+}
+
+figure figcaption {
+    color: #C8D6C7;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    height: 20px;
+    background-color: #65444F;
+    color: #D6CDBE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
