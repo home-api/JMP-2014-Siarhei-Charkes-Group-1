@@ -18,21 +18,23 @@
     }
 </script>
 <span id="error"></span>
+
 <form action="" name="form" onsubmit="return validate()" method="post">
     <fieldset>
         <legend>Форма регистрации</legend>
         <table>
             <tr>
                 <td><label for="fio">ФИО</label></td>
-                <td><input type="text" id="fio" name="fio"/></td>
+                <td><input type="text" id="fio" name="fio" autofocus=""/></td>
             </tr>
             <tr>
                 <td><label for="email">Email</label></td>
-                <td><input type="email" id="email"/></td>
+                <td><input type="email" id="email" required autocomplete="off" multiple="multiple"/></td>
             </tr>
             <tr>
                 <td><label for="phone">Номер телефона</label></td>
-                <td><input type="tel" id="phone" placeholder="xxx xxx-xx-xx"/></td>
+                <td><input type="tel" id="phone" placeholder="xxx xxx-xx-xx"
+                           pattern="[0-9]{3}\s[0-9]{3}-[0-9]{2}-[0-9]{2}" required/></td>
             </tr>
             <tr>
                 <td><label for="site">Веб-сайт</label></td>
@@ -49,7 +51,12 @@
         <table>
             <tr>
                 <td><label for="country">Страна</label></td>
-                <td><input type="text" id="country"/></td>
+                <td><select id="country">
+                    <option value="Belarus">Belarus</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Ukraine">Ukraine</option>
+                </select></td>
             </tr>
             <tr>
                 <td><label for="address">Адрес</label></td>
@@ -75,7 +82,7 @@
             </tr>
             <tr>
                 <td><label for="not-count">Кол-во уведомление в неделю</label></td>
-                <td><input type="number" id="not-count"/></td>
+                <td><input type="number" id="not-count" min="7" max="21" value="7"/></td>
             </tr>
         </table>
     </fieldset>
