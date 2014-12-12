@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Entity(name = "address")
 public class Address {
 
     private Integer id;

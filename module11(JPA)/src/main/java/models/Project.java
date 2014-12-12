@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Entity(name = "project")
 public class Project {
 
     private Integer id;
@@ -47,5 +47,14 @@ public class Project {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", employees=" + employees +
+                '}';
     }
 }

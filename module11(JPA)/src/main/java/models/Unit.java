@@ -1,18 +1,12 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Entity(name = "unit")
 public class Unit {
 
     private Integer id;
@@ -34,7 +28,7 @@ public class Unit {
         return name;
     }
 
-    @OneToMany(targetEntity = Employee.class)
+    @OneToMany(targetEntity = Employee.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "unit_id")
     public List<Employee> getEmployees() {
         return employees;
@@ -50,5 +44,10 @@ public class Unit {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Unit: {id = " + id + ", name = " + name + ", employees " + employees + "}";
     }
 }

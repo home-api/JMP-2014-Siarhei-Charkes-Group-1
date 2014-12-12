@@ -3,56 +3,60 @@ package service.impl;
 import models.Employee;
 import models.Project;
 import models.Unit;
+import org.hibernate.Session;
 import service.Service;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
 public class ServiceImpl implements Service {
 
-    private Connection getConnection() {
-        Connection con = null;
+    private Session session;
 
-        try {
-            Class.forName("org.sqlite.JDBC");
-            con = DriverManager.getConnection("jdbc:sqlite:jpa.db");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return con;
-    }
-
-    @Override
-    public void createEmployee(Employee employee) {
-
+    public ServiceImpl() {
     }
 
     @Override
     public Employee findEmployee(Integer id) {
-        Connection con = getConnection();
-        return null;
+        return (Employee) session.load(Employee.class, id);
     }
 
     @Override
-    public void deleteEmployee(Integer id) {
-
+    public Unit findUnit(Integer id) {
+        return (Unit) session.load(Unit.class, id);
     }
 
     @Override
-    public void addEmployeeToUnit(Employee employee, Unit unit) {
-
+    public List<Unit> getAllUnits() {
+        return session.createQuery("SELECT u from unit u").list();
     }
 
     @Override
-    public void assignEmployeeToProject(Employee employee, Project project) {
-
+    public void save(Object object) {
+        session.beginTransaction();
+        session.save(object);
+        session.getTransaction().commit();
     }
 
+    @Override
+    public void update(Object object) {
+        session.update(object);
+    }
+
+    @Override
+    public void deleteUnit(Unit unit) {
+        session.delete(unit);
+    }
+
+    @Override
+    public Project getProject(Integer id) {
+        return (Project) session.load(Project.class, id);
+    }
+
+    @Override
+    public void setSession(Session session) {
+        this.session = session;
+    }
 }

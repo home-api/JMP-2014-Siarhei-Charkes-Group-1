@@ -1,22 +1,12 @@
 package models;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Entity(name = "employee")
 public class Employee {
 
     private Integer id;
@@ -89,5 +79,17 @@ public class Employee {
 
     public void setProjects(List<Project> projects) {
         this.projects = projects;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", employeeStatus=" + employeeStatus +
+                ", address=" + address +
+                ", employeePersonalInfo=" + employeePersonalInfo +
+                ", unit=" + unit +
+                ", projects=" + projects +
+                '}';
     }
 }

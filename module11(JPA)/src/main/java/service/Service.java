@@ -3,20 +3,28 @@ package service;
 import models.Employee;
 import models.Project;
 import models.Unit;
+import org.hibernate.Session;
+
+import java.util.List;
 
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
 public interface Service {
 
-    void createEmployee(Employee employee);
-
     Employee findEmployee(Integer id);
 
-    void deleteEmployee(Integer id);
+    Unit findUnit(Integer id);
 
-    void addEmployeeToUnit(Employee employee, Unit unit);
+    List<Unit> getAllUnits();
 
-    void assignEmployeeToProject(Employee employee, Project project);
+    void save(Object unit);
 
+    void update(Object object);
+
+    void deleteUnit(Unit unit);
+
+    Project getProject(Integer id);
+
+    void setSession(Session session);
 }
