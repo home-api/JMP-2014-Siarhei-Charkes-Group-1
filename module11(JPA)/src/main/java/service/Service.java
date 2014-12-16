@@ -12,19 +12,21 @@ import java.util.List;
  */
 public interface Service {
 
-    Employee findEmployee(Integer id);
+    /* CRUD operations */
+    void save(Object object);
 
-    Unit findUnit(Integer id);
+    <T> T load(Class<T> clazz, Integer id);
+
+    void delete(Object object);
+
+    void update(Object object);
+    /* end CRUD operations */
 
     List<Unit> getAllUnits();
 
-    void save(Object unit);
+    void addEmployeeToUnits(Employee employee, List<Integer> unitsIds);
 
-    void update(Object object);
-
-    void deleteUnit(Unit unit);
-
-    Project getProject(Integer id);
+    void addEmployeeToProjects(Employee employee, List<Integer> projectsIds);
 
     void setSession(Session session);
 }

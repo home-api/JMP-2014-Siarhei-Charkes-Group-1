@@ -11,7 +11,6 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
         <property name="show_sql">false</property>
 
-        <mapping class="models.Address"/>
         <mapping class="models.EmployeeStatus"/>
         <mapping class="models.EmployeePersonalInfo"/>
         <mapping class="models.Employee"/>

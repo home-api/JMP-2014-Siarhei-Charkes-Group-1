@@ -23,45 +23,45 @@ public class Main {
         service.setSession(session);
 
         try {
+            // create unit
             Unit unit = new Unit();
-            unit.setId(1);
             unit.setName("unit");
             unit.setEmployees(new ArrayList<Employee>());
             service.save(unit);
 
-            Unit foundUnit = service.findUnit(1);
-            System.out.println(foundUnit);
+            // load unit
+            Unit foundUnit = service.load(Unit.class, 1);
+            System.out.println("Created unit: " + foundUnit);
 
+            // update unit
             foundUnit.setName("newName");
             service.update(foundUnit);
 
             Address address = new Address();
             address.setStreet("street");
-            service.save(address);
 
             Employee employee = new Employee();
             employee.setAddress(address);
             service.save(employee);
 
-            foundUnit.setEmployees(Arrays.asList(employee));
-            service.update(unit);
-            System.out.println(foundUnit);
-            System.out.println(employee);
+            // add employee to units
+            service.addEmployeeToUnits(employee, Arrays.asList(foundUnit.getId()));
+            System.out.println("Unit with added employee: " + foundUnit);
+            System.out.println("Employee added to unit: " + employee);
 
             Project project = new Project();
             project.setName("project");
             service.save(project);
-            System.out.println(project);
+            System.out.println("Created project: " + service.load(Project.class, 1));
 
-            employee.setProjects(Arrays.asList(project));
+            // assign employee to projects
+            service.addEmployeeToProjects(employee, Arrays.asList(project.getId()));
+            session.refresh(employee);
+            System.out.println("Employee added to project: " + employee);
+            System.out.println("Project with added employee: " + project);
 
-            service.update(employee);
-            System.out.println(employee);
-
-            project = service.getProject(1);
-            System.out.println(project);
-
-            service.deleteUnit(foundUnit);
+            // delete unit
+            service.delete(foundUnit);
         } finally {
            session.close();
             sessionFactory.close();

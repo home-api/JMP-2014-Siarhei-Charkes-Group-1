@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ public class Unit {
     private Integer id;
     private String name;
 
-    private List<Employee> employees;
+    private List<Employee> employees = new ArrayList<Employee>();
 
     public Unit() {
     }
@@ -48,6 +49,8 @@ public class Unit {
 
     @Override
     public String toString() {
-        return "Unit: {id = " + id + ", name = " + name + ", employees " + employees + "}";
+        return "Unit: {"
+                + " id = " + id
+                + ", name = " + name + "}";
     }
 }

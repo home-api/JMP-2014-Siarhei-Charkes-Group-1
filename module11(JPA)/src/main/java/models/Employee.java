@@ -32,7 +32,7 @@ public class Employee {
         return employeeStatus;
     }
 
-    @OneToOne(mappedBy = "employee")
+    @Embedded
     public Address getAddress() {
         return address;
     }

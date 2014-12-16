@@ -19,13 +19,22 @@ public class ServiceImpl implements Service {
     }
 
     @Override
-    public Employee findEmployee(Integer id) {
-        return (Employee) session.load(Employee.class, id);
+    public void save(Object object) {
+        session.beginTransaction();
+        session.save(object);
+        session.getTransaction().commit();
     }
 
-    @Override
-    public Unit findUnit(Integer id) {
-        return (Unit) session.load(Unit.class, id);
+    public <T> T load(Class<T> clazz, Integer id) {
+        return (T) session.load(clazz, id);
+    }
+
+    public void delete(Object object) {
+        session.delete(object);
+    }
+
+    public void update(Object object) {
+        session.update(object);
     }
 
     @Override
@@ -34,25 +43,23 @@ public class ServiceImpl implements Service {
     }
 
     @Override
-    public void save(Object object) {
-        session.beginTransaction();
-        session.save(object);
-        session.getTransaction().commit();
+    public void addEmployeeToUnits(Employee employee, List<Integer> unitsIds) {
+        for (Integer unitId : unitsIds) {
+            Unit unit = load(Unit.class, unitId);
+            unit.getEmployees().add(employee);
+            employee.setUnit(unit);
+            save(unit);
+            save(employee);
+        }
     }
 
     @Override
-    public void update(Object object) {
-        session.update(object);
-    }
-
-    @Override
-    public void deleteUnit(Unit unit) {
-        session.delete(unit);
-    }
-
-    @Override
-    public Project getProject(Integer id) {
-        return (Project) session.load(Project.class, id);
+    public void addEmployeeToProjects(Employee employee, List<Integer> projectsIds) {
+        for (Integer projectId : projectsIds) {
+            Project project = load(Project.class, projectId);
+            project.getEmployees().add(employee);
+            save(project);
+        }
     }
 
     @Override
