@@ -1,4 +1,4 @@
-package by.cdp.task01;
+package by.cdp.task01.dao;
 
 import org.springframework.stereotype.Repository;
 

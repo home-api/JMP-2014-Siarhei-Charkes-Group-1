@@ -1,5 +1,6 @@
-package by.cdp.task01;
+package by.cdp.task01.service;
 
+import by.cdp.task01.dao.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

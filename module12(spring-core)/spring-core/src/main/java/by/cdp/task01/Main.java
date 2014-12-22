@@ -1,5 +1,6 @@
 package by.cdp.task01;
 
+import by.cdp.task01.service.StoreService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
@@ -13,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         ApplicationContext context = new FileSystemXmlApplicationContext(
-                "src/main/resources/task01/spring-task01.xml");
+                "src/main/resources/task01/spring-main-configuration.xml");
 
         StoreService storeService = (StoreService) context.getBean("storeService");
 
