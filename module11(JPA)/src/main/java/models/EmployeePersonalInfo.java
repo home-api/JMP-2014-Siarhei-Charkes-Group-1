@@ -7,7 +7,7 @@ import javax.persistence.*;
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Entity(name = "employee_personal_info")
 public class EmployeePersonalInfo {
 
     private Integer id;

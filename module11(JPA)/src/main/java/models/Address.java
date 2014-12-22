@@ -5,10 +5,9 @@ import javax.persistence.*;
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Embeddable
 public class Address {
 
-    private Integer id;
     private String street;
     private String houseNumber;
     private String phone;
@@ -16,12 +15,6 @@ public class Address {
     private Employee employee;
 
     public Address() {
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Integer getId() {
-        return id;
     }
 
     @Column(name = "street")
@@ -43,10 +36,6 @@ public class Address {
     @JoinColumn(name = "employee_id")
     public Employee getEmployee() {
         return employee;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public void setStreet(String street) {

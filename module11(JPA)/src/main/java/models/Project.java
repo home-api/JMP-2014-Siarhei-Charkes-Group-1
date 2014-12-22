@@ -1,18 +1,19 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Yahor_Karabitsyn on 12/11/2014.
  */
-@Entity
+@Entity(name = "project")
 public class Project {
 
     private Integer id;
     private String name;
 
-    private List<Employee> employees;
+    private List<Employee> employees = new ArrayList<Employee>();
 
     public Project() {
     }
@@ -47,5 +48,13 @@ public class Project {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
