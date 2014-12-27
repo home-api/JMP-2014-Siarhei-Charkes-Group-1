@@ -1,8 +1,10 @@
 package by.cdp.task01;
 
-import by.cdp.task01.service.StoreService;
+import by.cdp.task01.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,9 +18,11 @@ public class Main {
         ApplicationContext context = new FileSystemXmlApplicationContext(
                 "src/main/resources/task01/spring-main-configuration.xml");
 
-        StoreService storeService = (StoreService) context.getBean("storeService");
+        Map<String, String> map = (Map<String, String>) context.getBean("map");
+        System.out.println(map);
 
-        System.out.println(storeService.getMessage());
+        UserService userService = (UserService) context.getBean("userService");
+        System.out.println(userService.getMessage());
     }
 
 }

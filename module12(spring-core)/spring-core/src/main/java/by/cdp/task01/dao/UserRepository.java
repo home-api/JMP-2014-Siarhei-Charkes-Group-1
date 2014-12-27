@@ -5,14 +5,13 @@ import org.springframework.stereotype.Repository;
 /**
  * Created with IntelliJ IDEA.
  * User: web
- * Date: 12/22/2014
- * Time: 4:05 AM
+ * Date: 12/27/2014
+ * Time: 8:47 AM
  */
-@Repository
-public class StoreRepository {
+public class UserRepository {
 
     public String getMessage() {
-        return "repo";
+        return "UserRepository";
     }
 
 }

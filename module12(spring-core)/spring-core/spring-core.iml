@@ -4,7 +4,9 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/task01/spring-task01.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/task01/spring-dao-configuration.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/task01/spring-main-configuration.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/task01/spring-service-configuration.xml</file>
         </fileset>
       </configuration>
     </facet>
