@@ -1,5 +1,6 @@
 package by.cdp.task01;
 
+import by.cdp.task01.service.ProductService;
 import by.cdp.task01.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -22,6 +23,12 @@ public class Main {
         System.out.println(map);
 
         UserService userService = (UserService) context.getBean("userService");
+        System.out.println(userService.getMessage());
+
+        ProductService productService = context.getBean(ProductService.class);
+        System.out.println(productService.getMessage());
+
+        userService = (UserService) context.getBean("us");
         System.out.println(userService.getMessage());
     }
 

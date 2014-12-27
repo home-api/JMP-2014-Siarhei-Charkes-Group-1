@@ -23,4 +23,6 @@
         <entry key="3" value="Apple"/>
     </util:map>
 
+    <alias name="userService" alias="us"/>
+
 </beans>

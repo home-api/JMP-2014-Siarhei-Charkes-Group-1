@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d2638bb-96fc-4b7e-8929-c2308ebe7ec6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ItemService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/dao/OrderRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/OrderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ProductService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ProposalService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/SellerService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/dao/UserRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/dao/UserRepositoryFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/task01/settings.properties" />
-      <change type="DELETED" beforePath="C:\Users\web\IdeaProjects\cdp\JMP-2014-Siarhei-Charkes\module12(spring-core)\spring-core\src\main\java\by\cdp\task01\dao\StoreRepository.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\web\IdeaProjects\cdp\JMP-2014-Siarhei-Charkes\module12(spring-core)\spring-core\src\main\java\by\cdp\task01\service\StoreService.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java" afterPath="$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-core.iml" afterPath="$PROJECT_DIR$/spring-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/task01/spring-dao-configuration.xml" afterPath="$PROJECT_DIR$/src/main/resources/task01/spring-dao-configuration.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml" afterPath="$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/task01/spring-service-configuration.xml" afterPath="$PROJECT_DIR$/src/main/resources/task01/spring-service-configuration.xml" />
     </list>
     <ignored path="spring-core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,14 +26,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="680">
-              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.92957747" vertical-offset="270" max-vertical-offset="820">
+              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-main-configuration.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="660">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ItemService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="230" max-vertical-offset="700">
+            <state vertical-scroll-proportion="-4.4" vertical-offset="230" max-vertical-offset="700">
               <caret line="17" column="76" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding />
             </state>
@@ -139,16 +134,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-service-configuration.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/task01/spring-service-configuration.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="700">
-              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -176,12 +161,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/task01/spring-dao-configuration.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/task01/settings.properties" />
         <option value="$PROJECT_DIR$/src/main/java/by/cdp/task01/dao/OrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/task01/spring-service-configuration.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java" />
       </list>
     </option>
   </component>
@@ -676,7 +661,7 @@
       <workItem from="1419237604311" duration="1464000" />
       <workItem from="1419268144007" duration="5106000" />
       <workItem from="1419676763938" duration="3727000" />
-      <workItem from="1419684317070" duration="6903000" />
+      <workItem from="1419684317070" duration="8116000" />
     </task>
     <task id="LOCAL-00001" summary="Spring-Core module: task01">
       <created>1419270721758</created>
@@ -690,7 +675,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18494000" />
+    <option name="totallyTimeSpent" value="19707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -718,7 +703,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32663316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32663316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -960,14 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="620">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ProposalService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="680">
@@ -1036,16 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="680">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/dao/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
@@ -1066,9 +1033,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/service/ItemService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="230" max-vertical-offset="700">
+        <state vertical-scroll-proportion="-4.4" vertical-offset="230" max-vertical-offset="700">
           <caret line="17" column="76" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/task01/spring-main-configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="660">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/cdp/task01/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92957747" vertical-offset="270" max-vertical-offset="820">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
