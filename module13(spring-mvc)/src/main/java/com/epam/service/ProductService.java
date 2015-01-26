@@ -9,6 +9,6 @@ public interface ProductService {
 
     List<String> getAllProducts();
 
-    Integer getProductPrice(String productName);
+    String getProductInfo(String productName);
 
 }

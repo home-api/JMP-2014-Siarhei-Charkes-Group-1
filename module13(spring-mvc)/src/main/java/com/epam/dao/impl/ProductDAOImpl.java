@@ -12,14 +12,14 @@ import java.util.Map;
  */
 public class ProductDAOImpl implements ProductDAO {
 
-    private static final Map<String, Integer> PRODUCT_PRICES = new HashMap<String, Integer>();
+    private static final Map<String, String> PRODUCT_PRICES = new HashMap<String, String>();
 
     static {
-        PRODUCT_PRICES.put("product1", 11);
-        PRODUCT_PRICES.put("product2", 22);
-        PRODUCT_PRICES.put("product3", 33);
-        PRODUCT_PRICES.put("product4", 44);
-        PRODUCT_PRICES.put("product5", 55);
+        PRODUCT_PRICES.put("product1", "This is product1");
+        PRODUCT_PRICES.put("product2", "This is product2");
+        PRODUCT_PRICES.put("product3", "This is product3");
+        PRODUCT_PRICES.put("product4", "This is product4");
+        PRODUCT_PRICES.put("product5", "This is product5");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public Integer getProductPrice(String productName) {
+    public String getProductInfo(String productName) {
         return PRODUCT_PRICES.get(productName);
     }
 }

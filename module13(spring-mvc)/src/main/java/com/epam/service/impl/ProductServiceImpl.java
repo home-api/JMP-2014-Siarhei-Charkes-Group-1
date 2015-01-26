@@ -18,8 +18,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Integer getProductPrice(String productName) {
-        return productDAO.getProductPrice(productName);
+    public String getProductInfo(String productName) {
+        return productDAO.getProductInfo(productName);
     }
 
     public void setProductDAO(ProductDAO productDAO) {
