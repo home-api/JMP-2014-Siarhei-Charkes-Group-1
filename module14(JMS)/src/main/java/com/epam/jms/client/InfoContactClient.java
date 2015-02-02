@@ -3,17 +3,14 @@ package com.epam.jms.client;
 import com.compumark.messaging.MessageType;
 import com.compumark.messaging.MessagingException;
 import com.compumark.messaging.MessagingMAO;
-import com.epam.util.Constants;
 
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Properties;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by Yahor_Karabitsyn on 2/2/2015.
@@ -21,25 +18,22 @@ import java.util.Properties;
 public class InfoContactClient {
 
     public void sendAndReadMessage(String userName) {
-        Properties initialProperties = new Properties();
-        initialProperties.put(InitialContext.INITIAL_CONTEXT_FACTORY, Constants.CONTEXT_FACTORY);
-        initialProperties.put(InitialContext.PROVIDER_URL, Constants.JMS_URL);
-
         try {
-            InitialContext context = new InitialContext(initialProperties);
-            context.lookup("jms/Q" + MessageType.OPSI_INFOSERVER_MESSAGE.getMessageTypeId());
-
             MessagingMAO mao = MessagingMAO.getMAO("OPSiService");
+
             String request =
                     "<Request>"
                             + "<Option>GetSecLoginContact</Option>"
                             + "<SecLoginContactName>" + userName + "</SecLoginContactName>"
                             + "</Request>";
-            mao.sendAndRead(
+
+            String response = mao.sendAndRead(
                     request, MessageType.OPSI_INFOSERVER_MESSAGE, com.compumark.messaging.Message.PRIORITY_ONLINE, -1);
+
+            parseContactInfo(response.getBytes("UTF-8"));
         } catch (MessagingException e) {
             e.printStackTrace();
-        } catch (NamingException e) {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
 

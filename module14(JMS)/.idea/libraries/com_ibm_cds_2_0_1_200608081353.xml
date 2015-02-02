@@ -1,0 +1,38 @@
+<component name="libraryTable">
+  <library name="com.ibm.cds_2.0.1.200608081353">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.cds_2.0.1.200608081353.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.events.client_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.events.service_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.icu_3.4.5.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.uddi_1.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.bootstrap_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.debug.osgi_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.ejbportable_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.emf_2.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.esi_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.migration_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.portletcontainer_2.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.proxy.admin_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.proxy_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.runtime.coregroupbridge_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.runtime.dist_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.runtime.gateway_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.runtime_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.security.crypto_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.sib.server_2.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.sib.utils_2.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.sib.wccm_2.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.sip.container_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.sip.proxy_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.wccm.compatibility_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.wccm_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.webcontainer_2.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.webmsg_1.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.ws.webui_6.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/plugins/com.ibm.wsspi.rrd_6.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

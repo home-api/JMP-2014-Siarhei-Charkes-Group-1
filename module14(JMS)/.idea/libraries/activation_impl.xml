@@ -1,0 +1,42 @@
+<component name="libraryTable">
+  <library name="activation-impl">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/activation-impl.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/aspectjrt.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/bootstrap.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/bsf-engines.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/commandlineutils.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/EJBCommandTarget.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/ffdcSupport.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/htmlshell.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/installver.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/installxml.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/iscdeploy.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/ivblogbr.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/IVTClient.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/j2ee.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/jacl.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/launchclient.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/lmproxy.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/mail-impl.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/marshall.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/nif.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/physicalrep.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/pmirm4arm.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/rsadbutils.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/rsahelpers.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/serviceadapter.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/setup.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/sljc.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/spy-sl.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/sqlserver.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/startup.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/tcljava.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/urlprotocols.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/wsatlib.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/libs/lib/wsif-compatb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
