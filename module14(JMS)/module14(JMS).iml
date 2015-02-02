@@ -11,6 +11,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.jms:jms-api:1.1-rev-1" level="project" />
+    <orderEntry type="library" name="messaging-2.101" level="project" />
+    <orderEntry type="library" name="logging-1.21" level="project" />
+    <orderEntry type="library" name="com.ibm.ws.webservices.thinclient_6.1.0" level="project" />
+    <orderEntry type="library" name="ibmorb" level="project" />
   </component>
 </module>
 

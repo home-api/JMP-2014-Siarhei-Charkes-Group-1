@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ibmorb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/ibmorb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

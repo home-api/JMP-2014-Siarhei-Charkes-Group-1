@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.ibm.ws.webservices.thinclient_6.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/com.ibm.ws.webservices.thinclient_6.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/com.ibm.ws.admin.client_6.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
