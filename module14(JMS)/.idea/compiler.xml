@@ -25,6 +25,9 @@
         <module name="module14(JMS)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="module14(JMS)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
